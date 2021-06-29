@@ -18,15 +18,15 @@ class EditTextActivity : AppCompatActivity() {
         }
 
         bb.addTextButton.setOnClickListener {
-            bb.editText.text.replace(8,9,"a")
+            bb.editText.text.replace(9,9,"a")
         }
 
         bb.getTextButton.setOnClickListener {
             val length = bb.editText.text.length
             val chars = CharArray(length)
             bb.editText.text.getChars(0, length, chars, 0)
-            bb.editText.text.replace(0, length, "e")
-            bb.editText.text.clear()
+//            bb.editText.text.replace(0, length, "e")
+//            bb.editText.text.clear()
 
             val bytes = toByte(chars)
             chars.clear()
