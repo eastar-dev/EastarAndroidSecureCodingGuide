@@ -1,11 +1,10 @@
 package dev.eastar.eastarandroidsecurecodingguide
 
-import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase
 import org.junit.Assert.assertArrayEquals
 import org.junit.Test
 
-
-class CharArrayToByteArrayKtTest {
+class SecurityKtxKtTest {
 
     @Test
     fun toByte() {
@@ -20,7 +19,7 @@ class CharArrayToByteArrayKtTest {
         println(actual.toTypedArray().hex)
 
         assertArrayEquals("A ß € 嗨 𝄞 🙂".toByteArray(), actual)
-        assertEquals("A ß € 嗨 𝄞 🙂".toByteArray().hex, actual.hex)
+        TestCase.assertEquals("A ß € 嗨 𝄞 🙂".toByteArray().hex, actual.hex)
     }
 
 

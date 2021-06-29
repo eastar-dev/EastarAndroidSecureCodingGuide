@@ -48,9 +48,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:hint="some string display hear"
+        android:textColor="#f00"
         app:layout_constraintBaseline_toBaselineOf="@+id/someStringLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/barrier" />
 
     <TextView
@@ -68,9 +68,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:hint="another string display hear"
+        android:textColor="#f00"
         app:layout_constraintBaseline_toBaselineOf="@+id/anotherStringLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/barrier" />
 
     <TextView
@@ -87,10 +87,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:hint="another string display hear"
+        android:hint="some string display hear after another string"
+        android:textColor="#f00"
         app:layout_constraintBaseline_toBaselineOf="@+id/someStringAfterAnotherStringLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/barrier" />
 
     <androidx.constraintlayout.widget.Barrier

@@ -1,7 +1,40 @@
 package dev.eastar.eastarandroidsecurecodingguide
 
+import android.graphics.Bitmap
+import android.graphics.Bitmap.CompressFormat
+import java.io.ByteArrayOutputStream
+import java.nio.ByteBuffer
+
+
+fun CharArray?.clear(clearKey: Char = 'c') {
+
+    this?.fill(clearKey)
+}
+
+fun ByteArray?.clear(clearKey: Char = 'b') {
+    this?.fill(clearKey.code.toByte())
+}
+
+fun Bitmap?.clear() {
+    if (this == null)
+        return
+
+    if (!isRecycled) {
+        val map = ByteBuffer.allocate(rowBytes * height)
+        copyPixelsFromBuffer(map)
+        recycle()
+    }
+}
+
+fun Bitmap.toByte(format: CompressFormat = CompressFormat.JPEG, quality: Int = 90): ByteArray? {
+    val out = ByteArrayOutputStream()
+    compress(format, quality, out)
+    return out.toByteArray()
+}
+
+
 const val MAX_BYTE_ON_CHAR = 3
-fun toByte(chars: CharArray, returnClear: ((ByteArray) -> Unit)? = { it.fill('x'.code.toByte()) }): ByteArray {
+fun toByte(chars: CharArray): ByteArray {
     val maxByteSize = chars.size * MAX_BYTE_ON_CHAR
     val bytes = ByteArray(maxByteSize)
     var i = 0 // i for chars index
@@ -49,7 +82,7 @@ fun toByte(chars: CharArray, returnClear: ((ByteArray) -> Unit)? = { it.fill('x'
     return result
 }
 
-fun toByteAscii(source: CharArray, returnClear: ((ByteArray) -> Unit)? = { it.fill('x'.code.toByte()) }): ByteArray {
+fun toByteAscii(source: CharArray): ByteArray {
     val target = ByteArray(source.size)
     for (i in source.indices)
         target[i] = source[i].code.toByte()

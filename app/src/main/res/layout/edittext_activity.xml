@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_200"
-        android:text="setText sample"
+        android:text="getText sample"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -40,11 +40,29 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="byte array to String setText sample"
+        android:text="press and type change text"
         app:layout_constraintBaseline_toBaselineOf="@+id/setTextButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/setTextButton" />
+
+    <Button
+        android:id="@+id/addTextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="set text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setTextButton" />
+
+    <TextView
+        android:id="@+id/addTextButtonDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="add text a"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addTextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addTextButton" />
 
     <Button
         android:id="@+id/getTextButton"
@@ -53,7 +71,7 @@
         android:layout_margin="8dp"
         android:text="get text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setTextButton" />
+        app:layout_constraintTop_toBottomOf="@+id/addTextButton" />
 
     <TextView
         android:id="@+id/getTextButtonDesc"
@@ -63,7 +81,6 @@
         android:text="byte array to String setText sample"
         app:layout_constraintBaseline_toBaselineOf="@+id/getTextButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/getTextButton" />
 
     <Button
