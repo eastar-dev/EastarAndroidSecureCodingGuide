@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/sampleTextView"
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -27,52 +27,51 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <Button
-        android:id="@+id/setTextButton1"
+        android:id="@+id/setTextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="set text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sampleTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <TextView
-        android:id="@+id/setTextButton1Desc"
+        android:id="@+id/setTextButtonDesc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="byte array to String setText sample"
-        app:layout_constraintBaseline_toBaselineOf="@+id/setTextButton1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/setTextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toEndOf="@+id/setTextButton1" />
+        app:layout_constraintStart_toEndOf="@+id/setTextButton" />
 
     <Button
-        android:id="@+id/getTextButton2"
+        android:id="@+id/getTextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="get text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setTextButton1" />
+        app:layout_constraintTop_toBottomOf="@+id/setTextButton" />
 
     <TextView
-        android:id="@+id/getTextButton2Desc"
+        android:id="@+id/getTextButtonDesc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="byte array to String setText sample"
-        app:layout_constraintBaseline_toBaselineOf="@+id/getTextButton2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/getTextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toEndOf="@+id/getTextButton2" />
+        app:layout_constraintStart_toEndOf="@+id/getTextButton" />
 
     <Button
         android:id="@+id/exit"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="exit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,67 +19,86 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="TextView"
+        android:text="String call with func and check change"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2" />
 
     <Button
-        android:id="@+id/setTextButton1"
+        android:id="@+id/stringTest"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="set text"
+        android:text="string class test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sampleTextView" />
 
     <TextView
-        android:id="@+id/setTextButton1Desc"
+        android:id="@+id/someStringLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="byte array to String setText sample"
-        app:layout_constraintBaseline_toBaselineOf="@+id/setTextButton1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/setTextButton1" />
-
-    <Button
-        android:id="@+id/setTextButton2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="set text"
+        android:text="Some String"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setTextButton1" />
+        app:layout_constraintTop_toBottomOf="@+id/stringTest" />
 
     <TextView
-        android:id="@+id/setTextButton2Desc"
+        android:id="@+id/someString"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="byte array to String setText sample"
-        app:layout_constraintBaseline_toBaselineOf="@+id/setTextButton2"
+        android:hint="some string display hear"
+        app:layout_constraintBaseline_toBaselineOf="@+id/someStringLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/setTextButton2" />
-
-    <Button
-        android:id="@+id/setTextButton3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="set text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setTextButton2" />
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/barrier" />
 
     <TextView
-        android:id="@+id/setTextButton3Desc"
+        android:id="@+id/anotherStringLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="byte array to String setText sample"
-        app:layout_constraintBaseline_toBaselineOf="@+id/setTextButton3"
+        android:text="Another String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/someStringLabel" />
+
+    <TextView
+        android:id="@+id/anotherString"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="another string display hear"
+        app:layout_constraintBaseline_toBaselineOf="@+id/anotherStringLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/setTextButton3" />
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+    <TextView
+        android:id="@+id/someStringAfterAnotherStringLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Some String After Another String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anotherStringLabel" />
+
+    <TextView
+        android:id="@+id/someStringAfterAnotherString"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="another string display hear"
+        app:layout_constraintBaseline_toBaselineOf="@+id/someStringAfterAnotherStringLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="anotherStringLabel,someStringLabel,someStringAfterAnotherStringLabel" />
 
     <Button
         android:id="@+id/exit"
@@ -88,5 +107,4 @@
         android:layout_margin="8dp"
         android:text="exit"
         app:layout_constraintBottom_toBottomOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

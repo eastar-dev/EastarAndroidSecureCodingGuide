@@ -12,5 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(bb.root)
 
         bb.setTextSample.setOnClickListener { startActivity(Intent(this, TextViewActivity::class.java)) }
+        bb.getTextSample.setOnClickListener { startActivity(Intent(this, EditTextActivity::class.java)) }
+        bb.stringSample.setOnClickListener { startActivity(Intent(this, StringActivity::class.java)) }
+        bb.secureWindowSample.setOnClickListener { startActivity(Intent(this, SecureWindowActivity::class.java)) }
     }
 }

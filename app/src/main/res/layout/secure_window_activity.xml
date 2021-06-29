@@ -15,36 +15,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/setTextSample"
+        android:id="@+id/addFlagSecure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="setText Sample"
+        android:text="add Flag Secure"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/getTextSample"
+        android:id="@+id/clearFlagSecure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="getText Sample"
-        app:layout_constraintTop_toBottomOf="@+id/setTextSample" />
+        android:text="clear Flag Secure"
+        app:layout_constraintTop_toBottomOf="@+id/addFlagSecure" />
 
     <Button
-        android:id="@+id/stringSample"
+        android:id="@+id/exit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="String Sample"
-        app:layout_constraintTop_toBottomOf="@+id/getTextSample" />
-
-    <Button
-        android:id="@+id/secureWindowSample"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Secure Window Sample"
-        app:layout_constraintTop_toBottomOf="@+id/stringSample" />
-
+        android:text="exit"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

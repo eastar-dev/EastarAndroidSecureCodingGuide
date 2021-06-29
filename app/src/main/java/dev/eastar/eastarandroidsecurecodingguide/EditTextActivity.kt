@@ -2,29 +2,26 @@ package dev.eastar.eastarandroidsecurecodingguide
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import dev.eastar.eastarandroidsecurecodingguide.databinding.EdittextActivityBinding
 import dev.eastar.eastarandroidsecurecodingguide.databinding.TextviewActivityBinding
 
 class EditTextActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val bb = TextviewActivityBinding.inflate(layoutInflater)
+        val bb = EdittextActivityBinding.inflate(layoutInflater)
         setContentView(bb.root)
 
-        bb.setTextButton1.setOnClickListener {
+        bb.setTextButton.setOnClickListener {
             val charSampleData: CharArray = charArrayOf('e', 'a', 's', 't', 'a', 'r', 'd', 'e', 'v', '1')
-            bb.sampleTextView.setText(charSampleData, 0, 10)
+            bb.editText.setText(charSampleData, 0, 10)
         }
 
-        bb.setTextButton2.setOnClickListener {
-            val charSampleData = "eastardev2"
-            bb.sampleTextView.text = charSampleData
+        bb.getTextButton.setOnClickListener {
+            bb.editText.editableText
+            bb.editText.text
         }
 
-        bb.setTextButton3.setOnClickListener {
-            val charSampleData = byteArrayOf('e'.code.toByte(), 'a'.code.toByte(), 's'.code.toByte(), 't'.code.toByte(), 'a'.code.toByte(), 'r'.code.toByte(), 'd'.code.toByte(), 'e'.code.toByte(), 'v'.code.toByte(), '3'.code.toByte())
-            bb.sampleTextView.text = String(charSampleData)
-        }
 
         bb.exit.setOnClickListener { finish() }
     }
