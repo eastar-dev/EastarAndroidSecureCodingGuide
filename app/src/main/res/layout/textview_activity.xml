@@ -85,11 +85,11 @@
         app:layout_constraintStart_toEndOf="@+id/setTextButton3" />
 
     <Button
-        android:id="@+id/removeTextButton"
+        android:id="@+id/exit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="remove text"
+        android:text="exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

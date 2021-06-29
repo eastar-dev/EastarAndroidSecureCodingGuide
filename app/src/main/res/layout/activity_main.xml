@@ -10,6 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="Eastar Android Secure Coding Guide"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -17,7 +18,17 @@
         android:id="@+id/setTextSample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="setText Sample"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/getTextSample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="getText Sample"
+        app:layout_constraintTop_toBottomOf="@+id/setTextSample" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,8 @@
 package dev.eastar.eastarandroidsecurecodingguide
 
 import android.os.Bundle
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import dev.eastar.eastarandroidsecurecodingguide.databinding.TextviewActivityBinding
-import java.nio.ByteBuffer
-import java.nio.CharBuffer
-import java.nio.charset.Charset
 
 class TextViewActivity : AppCompatActivity() {
 
@@ -30,8 +26,6 @@ class TextViewActivity : AppCompatActivity() {
             bb.sampleTextView.text = String(charSampleData)
         }
 
-        bb.removeTextButton.setOnClickListener {
-            bb.sampleTextView.text = ""
-        }
+        bb.exit.setOnClickListener { finish() }
     }
 }
