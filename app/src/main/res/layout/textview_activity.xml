@@ -29,7 +29,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="set text"
+        android:text="string class test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sampleTextView" />
 
@@ -44,12 +44,12 @@
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/setTextButton1" />
 
-    <Button
+    <TextView
         android:id="@+id/setTextButton2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="set text"
+        android:text="Some String Text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/setTextButton1" />
 
@@ -62,14 +62,14 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/setTextButton2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toEndOf="@+id/setTextButton2" />
+        app:layout_constraintStart_toEndOf="@+id/barrier" />
 
-    <Button
+    <TextView
         android:id="@+id/setTextButton3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="set text"
+        android:text="Another String Text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/setTextButton2" />
 
@@ -82,7 +82,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/setTextButton3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toEndOf="@+id/setTextButton3" />
+        app:layout_constraintStart_toEndOf="@+id/barrier" />
 
     <Button
         android:id="@+id/exit"
@@ -92,5 +92,12 @@
         android:text="exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="setTextButton3,setTextButton2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
