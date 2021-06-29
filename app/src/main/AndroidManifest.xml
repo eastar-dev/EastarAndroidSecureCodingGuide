@@ -20,6 +20,9 @@
         </activity>
 
         <activity android:name=".TextViewActivity" />
+        <activity android:name=".EditTextActivity" />
+        <activity android:name=".StringActivity" />
+        <activity android:name=".SecureWindowActivity" />
     </application>
 
 </manifest>

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="Eastar Android Secure Coding Guide"
+        android:text="Try screen capture"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
